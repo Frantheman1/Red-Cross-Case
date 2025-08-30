@@ -1,0 +1,18 @@
+# Backend API/WS container (Express + WS)
+FROM node:18-alpine
+WORKDIR /app
+
+# Global tools
+RUN npm i -g pnpm@10 tsx@4.20.5
+
+# Install deps with pnpm (resolves peer issues better than npm)
+COPY package.json pnpm-lock.yaml* ./
+RUN pnpm install --no-frozen-lockfile
+
+# Copy backend sources
+COPY devserver ./devserver
+
+ENV PORT=8080
+EXPOSE 8080
+
+CMD ["tsx", "devserver/index.ts"]

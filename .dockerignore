@@ -1,0 +1,26 @@
+# dependencies and caches
+node_modules
+node_modules/**
+
+# Vite caches
+node_modules/.vite
+node_modules/.vite-cache
+
+# build output
+dist
+
+# VCS and editors
+.git
+.git/**
+.vscode
+.DS_Store
+Thumbs.db
+
+# logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# env file
+.env.local

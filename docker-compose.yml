@@ -1,0 +1,23 @@
+version: '4.0'
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile.api
+    environment:
+      NODE_ENV: production
+      PORT: 8080
+      MASTODON_INSTANCE: ${MASTODON_INSTANCE}
+      MASTODON_ACCESS_TOKEN: ${MASTODON_ACCESS_TOKEN}
+      BANNED_WORDS: ${BANNED_WORDS}
+    ports:
+      - "8080:8080"
+
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile.web
+    depends_on:
+      - api
+    ports:
+      - "5173:80"
