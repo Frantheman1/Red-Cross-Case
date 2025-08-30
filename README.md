@@ -25,7 +25,6 @@ A responsive, accessible, and real-time social feed web app built with **React**
 - 🔴 **Live Feed:** Real-time streaming posts using WebSockets.
 - 🔎 **Search & Filters:** Language and search filters reflected via URL.
 - 📊 **Trends & Stats:** Sidebar displays trends and simple statistics.
-- 🌙 **Dark Mode:** Fully themed dark-mode support.
 - 🧹 **Content Cleaning:** Server-side HTML stripping and profanity filtering.
 - ⚠️ **Banned Words Filtering:** Optional filtering via environment configuration.
 - 📱 **Responsive Design:** Mobile-friendly layout with semantic HTML.
@@ -87,7 +86,7 @@ Open [http://localhost:5173](http://localhost:5173) in your browser.
 
 ## ⚙️ Environment Configuration
 
-Create a `.env.local` file in the project root:
+Create a `.env` file in the project root:
 
 ```env
 MASTODON_INSTANCE=mastodon.social
